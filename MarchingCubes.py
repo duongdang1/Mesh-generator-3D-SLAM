@@ -2,7 +2,7 @@
 
 from turtle import Vec2D
 from typing import List
-from defer import inline_callbacks
+# from defer import inline_callbacks
 import matplotlib
 from plyfile import PlyData, PlyElement
 import math
@@ -62,8 +62,8 @@ for vertice in VERTICES_LIST:
 # cube_list.append([cube_list[0][0] +1, cube_list[0][1],cube_list[0][2]])
 
 cube_list[1] = [cube_list[0][0], cube_list[0][1]+1,cube_list[0][2]]
-cube_list[2] = [cube_list[0][0], cube_list[0][1],cube_list[0][2]+1]
-cube_list[3] = [cube_list[0][0],cube_list[0][1]+1,cube_list[0][2]+1]
+
+
 
 print(cube_list)
 
@@ -93,6 +93,8 @@ def get_inside_point_cube_list(cube_list,point_in_offgrid):
             point_inside.append(point_in_offgrid.index(point))
 
     return point_inside
+
+
 
 def cube_analyzer(original_point, point_inside):
     meshes = []
@@ -694,7 +696,7 @@ for i in range(len(triangle_mesh)):
 #     plt.plot([set[0][0],set[1][0]],[set[0][1],set[1][1]],[set[0][2],set[1][2]],'bo',linestyle="--")
 #     plt.plot([set[1][0],set[2][0]],[set[1][1],set[2][1]],[set[1][2],set[2][2]],'bo',linestyle="--")
 #     plt.plot([set[2][0],set[3][0]],[set[2][1],set[3][1]],[set[2][2],set[3][2]],'bo',linestyle="--")
-#     plt.plot([set[3][0],set[0][0]],[set[3][1],set[0][1]],[set[3][2],set[0][2]],'bo',linestyle="--")
+#     plt.plot([set[3][ 0],set[0][0]],[set[3][1],set[0][1]],[set[3][2],set[0][2]],'bo',linestyle="--")
 #     plt.plot([set[0][0],set[4][0]],[set[0][1],set[4][1]],[set[0][2],set[4][2]],'bo',linestyle="--")
 #     plt.plot([set[1][0],set[5][0]],[set[1][1],set[5][1]],[set[1][2],set[5][2]],'bo',linestyle="--")
 #     plt.plot([set[2][0],set[6][0]],[set[2][1],set[6][1]],[set[2][2],set[6][2]],'bo',linestyle="--")
